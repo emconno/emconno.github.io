@@ -2,3 +2,84 @@
     margin: 0;
     padding: 0;
 }
+
+.background-color {
+    z-index: -2;
+    background-color: rgba(190, 0, 0, .75);
+    width: 100%; height: 100%;
+    top: 0;
+    position: absolute;
+}
+
+.background-img {
+    z-index: -3;
+    max-width: 100%;
+    margin: auto;
+    position: absolute;
+    left:0; right: 0; bottom: 0;
+}
+
+header {
+    text-align: center;
+    margin: 10px 10px 0;
+    color: white;
+    padding: 10px;
+}
+
+h1 {
+    font-family: Tw Cen MT Bold, Arial, Helvetica, sans-serif;
+    font-size: 36px;
+}
+
+#underline {
+    width: 280px;
+    height: 3px;
+    background-color: white;
+    margin: 0 auto 4px;
+}
+
+h3 {
+    font-family: Tw Cen MT, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+}
+
+h2 {
+    font-family: Tw Cen MT, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.selection {
+    height: 200px; width: 90%;
+    margin: 10px 5%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px;
+    background-color: white;
+    padding: 5px;
+
+    font-family: Tw Cen MT, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+h5 {
+    font-style: italic;
+    
+}
+
+.selection:hover {
+    box-shadow: none;
+    border: solid 2px black;
+}
+
+@font-face {
+    font-family: Tw Cen MT;
+    src: url(fonts/tw-cen-mt.ttf);
+}
+
+@font-face {
+    font-family: Tw Cen MT Bold;
+    src: url(fonts/tw-cen-mt-bold.ttf);
+}
