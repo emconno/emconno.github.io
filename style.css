@@ -21,6 +21,7 @@ body {
     margin: auto;
     position: absolute;
     left:0; right: 0; bottom: 0;
+    opacity: 80%;
 }
 
 header {
@@ -80,11 +81,12 @@ h5 {
 }
 
 footer {
+    font-family: Tw Cen MT, Arial, Helvetica, sans-serif;
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 5px;
+    padding-bottom: 5px;
     
 }
 
