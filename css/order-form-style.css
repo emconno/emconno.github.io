@@ -148,7 +148,7 @@ input[type*="submit"] {
 
 #gradient {
     background-image: linear-gradient(rgba(190,0,0,0), rgba(190, 0, 0, 1));
-    height: 70px;
+    height: 35px;
     position: fixed;
     bottom: 100px; right: 0; left: 0;
 }

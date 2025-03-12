@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <title>Hewett Pizza | Confirm Order</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/receipt.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+        <script src="scripts/components/receiptComponents.js" defer></script>
+        <script src="scripts/receiptTemplate.js" defer></script>
+        
+    </head>
+
+    <body>
+        <main>
+            <div id="receipt">
+                <div id="paper">
+                    <h1 id="receipt-heading">Receipt</h1>
+                    <p class="dashes">--------------------------------------</p>
+                    <p>your order</p>
+                    <p class="dashes">--------------------------------------</p>
+                    <div id="receipt-body">
+                        <!-- <item> template
+                            <div class="item">
+                                <p class="item-element item-name">slice x2</p>
+                                <p class="item-element item-price">$0.00</p>
+                            </div>
+                        -->
+                        <item v-for="data in receiptData" v-bind:name="data.name" v-bind:price="data.price"></item>
+                    </div>
+                    <p class="dashes">--------------------------------------</p>
+                    <div class="item">
+                        <p class="item-element item-name">Total:</p>
+                        <p  id="total" class="item-element item-price">${{ total }}</p>
+                    </div>
+                    <img id="barcode" src="images/barcode.png">
+                    
+                    
+                </div>
+            </div>
+
+
+            <form>
+
+            </form>
+            
+        </main>
+
+        <div class="background-color"></div>
+    </body>
+    
+</html>

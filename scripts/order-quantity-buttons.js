@@ -1,8 +1,6 @@
 let buttons = document.getElementsByClassName('quantity-button');
 let increase = document.getElementsByClassName('increase');
 let decrease = document.getElementsByClassName('decrease');
-console.log(increase);
-
 
 let sliceNum = document.getElementById('slice-num');
 
@@ -20,7 +18,6 @@ function getItemSum(itemList) {
     return sum;
 }
 
-console.log(sliceNum.value);
 
 function selectItemList(element) {
     switch (element.parentNode.parentNode.parentNode.id) {
@@ -39,24 +36,35 @@ function selectItemList(element) {
 }
 
 function increaseQuantity(element) {
+    //get the button element's corresponding input type="number" element from the document
     let quantityEl = element.parentNode.children[1];
+    //get the value of the input as an integer
     let quantityNum = Number(quantityEl.value);
+
+    //if the input is not associated with the number of slices
     if (!quantityEl.isEqualNode(sliceNum)) {
+        //get the list of inputs associed with the input's category (toppings/drinks/condiments)
         let itemList = selectItemList(quantityEl);
+        //if the # of selected toppings/drinks/condiments does not exceed the # of slices
         if(getItemSum(itemList) < Number(sliceNum.value)) {
+            //increment the input value
             quantityNum++;
             quantityEl.value = quantityNum + '';
         }
     } else if (quantityNum < 8) {
+        //cap the # of slices input value at 8
         quantityNum++;
         quantityEl.value = quantityNum + '';
     }
 }
 
 function decreaseQuantity(element) {
+    //get the button element's corresponding input type="number" element from the document
     let quantityEl = element.parentNode.children[1];
+    //get the value of the input as an integer
     let quantityNum = Number(quantityEl.value);
     if (quantityNum > Number(quantityEl.min)) {
+        //decrement the input value
         quantityNum--;
         quantityEl.value = quantityNum + '';
     }
@@ -68,4 +76,4 @@ for (let i = 0; i < increase.length; i++) {
 
 for (let i = 0; i < decrease.length; i++) {
     decrease[i].onclick = () => decreaseQuantity(decrease[i]);
-}
+} 
