@@ -1,0 +1,67 @@
+#paper {
+    height: 500px; width: 90%;
+    max-width: 300px;
+    background-color: white;
+    margin: 70px auto 0;
+    /*
+    box-shadow: 0 5px 10px;
+    */
+    border: 1px black solid;
+    text-align: center;
+    position: relative;
+}
+ 
+#receipt-heading {
+    font-family: TW Cen MT, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.dashes {
+    font-weight: normal;
+    font-family: TW Cen MT, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 21px;
+    overflow: clip;
+    margin-bottom: 2px;
+}
+
+#receipt-body {
+    margin: 10px 0;
+}
+
+
+.item {
+    width: 80%;
+    height: 20px;
+    margin: 5px auto;
+}
+
+.item-element {
+    display: inline;
+}
+
+.item-name {
+    float: left;
+}
+
+.item-price {
+    float: right;
+}
+
+#total {
+    font-size: 20px;
+}
+
+#barcode {
+    width: 65%;
+    height: 35px;
+    position: absolute;
+    bottom: 10px; right: 50px;
+}

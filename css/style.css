@@ -11,7 +11,7 @@
 body {
     
     overflow: hidden;
-    background-image: url(images/hewett-phone-red.png);
+    background-image: url(../images/hewett-phone-red.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -112,10 +112,10 @@ footer {
 
 @font-face {
     font-family: Tw Cen MT;
-    src: url(fonts/tw-cen-mt.ttf);
+    src: url(../fonts/tw-cen-mt.ttf);
 }
 
 @font-face {
     font-family: Tw Cen MT Bold;
-    src: url(fonts/tw-cen-mt-bold.ttf);
+    src: url(../fonts/tw-cen-mt-bold.ttf);
 }
